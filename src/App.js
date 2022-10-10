@@ -26,11 +26,6 @@ const router = createBrowserRouter([
 
         element: <Home></Home>,
       },
-      {
-        path: "/quiztopics",
-
-        element: <QuizTopic></QuizTopic>,
-      },
     ],
   },
   {
