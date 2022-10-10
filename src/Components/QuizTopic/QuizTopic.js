@@ -7,13 +7,13 @@ const QuizTopic = ({ product }) => {
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
-          <img src={logo} alt="" />
+          <img className="bg-slate-100" src={logo} alt="" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>Total Question:{total} </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary">Start Quiz</button>
           </div>
         </div>
       </div>
