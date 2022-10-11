@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import QuestionOption from "../QuestionOption/QuestionOption";
 
 const QuizQuestion = ({ ques }) => {
   // console.log(ques.correctAnswer);
-  const { question } = ques;
+  const { question, correctAnswer } = ques;
   //   console.log(question);
 
   const newQuestion = question.replace(/(<([^>]+)>)/gi, "");
@@ -12,6 +13,13 @@ const QuizQuestion = ({ ques }) => {
   const handleClick = (event) => {
     const theText = event.currentTarget.textContent;
     console.log("the text: ", theText);
+    if (theText === correctAnswer) {
+      console.log("the answer is true");
+      toast.success("Your Answer is Correct", { autoClose: 1000 });
+    } else {
+      console.log("the answer is false");
+      toast.warning("Your Answer is Wrong", { autoClose: 1000 });
+    }
   };
 
   return (
@@ -28,14 +36,6 @@ const QuizQuestion = ({ ques }) => {
               handleClick={handleClick}
             ></QuestionOption>
           ))}
-        </div>
-        <div className="mt-7 text-center">
-          <h1>
-            Correct Answer is:
-            <span className="bg-green-600 rounded-lg p-1 ml-1  ">
-              {ques.correctAnswer}
-            </span>
-          </h1>
         </div>
       </div>
     </div>
