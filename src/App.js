@@ -29,30 +29,30 @@ const router = createBrowserRouter([
 
         element: <Home></Home>,
       },
+      {
+        path: "/quiz/:quizId",
+        loader: async ({ params }) => {
+          return fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+          );
+        },
+
+        element: <QuizDetails></QuizDetails>,
+      },
+
+      {
+        path: "/statistics",
+        loader: async () => {
+          return fetch("https://openapi.programming-hero.com/api/quiz");
+        },
+
+        element: <QuizQuestionChart></QuizQuestionChart>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
     ],
-  },
-  {
-    path: "/quiz/:quizId",
-    loader: async ({ params }) => {
-      return fetch(
-        `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
-      );
-    },
-
-    element: <QuizDetails></QuizDetails>,
-  },
-
-  {
-    path: "/statistics",
-    loader: async () => {
-      return fetch("https://openapi.programming-hero.com/api/quiz");
-    },
-
-    element: <QuizQuestionChart></QuizQuestionChart>,
-  },
-  {
-    path: "/blog",
-    element: <Blog></Blog>,
   },
 ]);
 

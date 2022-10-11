@@ -60,18 +60,6 @@ const Header = () => {
         </div>
       </div>
       {/* -------------------------------------------------- */}
-      <div className="card w-12/12  image-full my-5 mx-8">
-        <img
-          src="https://media.istockphoto.com/vectors/collection-of-portraits-of-thoughtful-people-vector-id1288700346?k=20&m=1288700346&s=612x612&w=0&h=MNJ-2isCJx1h6d3_g_K1Dvz90Uu5QrqFnUAnW6spVwM="
-          alt="quiz"
-        />
-        <div className="card-body text-end">
-          <p>
-            Test your engineering knowledge by answering of our best online quiz
-            questions.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
