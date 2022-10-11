@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 import QuestionOption from "../QuestionOption/QuestionOption";
 
 const QuizQuestion = ({ ques }) => {
@@ -10,7 +10,6 @@ const QuizQuestion = ({ ques }) => {
   // console.log(idx);
 
   const newQuestion = question.replace(/(<([^>]+)>)/gi, "");
-  //   console.log(newStr);
 
   const handleClick = (event) => {
     const theText = event.currentTarget.textContent;
