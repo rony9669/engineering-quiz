@@ -1,13 +1,18 @@
 import React from "react";
 
 const QuestionOption = (props) => {
-  //   console.log(props.option);
+  const { option, handleClick } = props;
+  // console.log(props);
   return (
     <div>
-      <li>
-        <input type="radio" name="question0" value="A" />
-        <span>{props.option}</span>
-      </li>
+      <div className="text-center">
+        <button
+          onClick={handleClick}
+          className=" p-2 bg-slate-200 w-full h-auto rounded-sm"
+        >
+          {option}
+        </button>
+      </div>
     </div>
   );
 };

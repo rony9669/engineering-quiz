@@ -9,8 +9,8 @@ const QuizDetails = () => {
   // console.log(quiz.data.questions);
   return (
     <div>
-      <h1>
-        The exam is about: <span>{name}</span>
+      <h1 className=" text-center mt-5 font-extrabold text-4xl">
+        The exam is about: <span className="text-indigo-600">{name}</span>
       </h1>
       {quiz.data.questions.map((ques) => (
         <QuizQuestion key={ques.id} ques={ques}></QuizQuestion>
