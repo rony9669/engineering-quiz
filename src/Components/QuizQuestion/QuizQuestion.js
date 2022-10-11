@@ -1,4 +1,6 @@
 import React from "react";
+import QuestionOption from "../QuestionOption/QuestionOption";
+import "./QuizQuestion.css";
 
 const QuizQuestion = ({ ques }) => {
   console.log(ques.options[0]);
@@ -10,30 +12,13 @@ const QuizQuestion = ({ ques }) => {
 
   return (
     <div>
-      <ul class="quiz">
+      <ul className="quiz">
         <li>
-          <h4>How many letters are there in "JS"?</h4>
-          <ul class="choices">
-            <li>
-              {" "}
-              <input type="radio" name="question0" value="A" />
-              <span>2</span>{" "}
-            </li>
-            <li>
-              {" "}
-              <input type="radio" name="question0" value="B" />
-              <span>1</span>{" "}
-            </li>
-            <li>
-              {" "}
-              <input type="radio" name="question0" value="C" />
-              <span>3</span>{" "}
-            </li>
-            <li>
-              {" "}
-              <input type="radio" name="question0" value="D" />
-              <span>4</span>{" "}
-            </li>
+          <h4>{newQuestion}</h4>
+          <ul className="choices">
+            {ques.options.map((option, idx) => (
+              <QuestionOption key={idx} option={option}></QuestionOption>
+            ))}
           </ul>
         </li>
       </ul>
