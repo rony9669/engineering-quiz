@@ -8,7 +8,7 @@ const QuestionOption = (props) => {
       <div className="text-center">
         <button
           onClick={handleClick}
-          className=" p-2 bg-slate-200 w-full h-auto rounded-sm"
+          className=" p-2 bg-slate-200 hover:bg-orange-200 rounded-md w-full h-max break-all"
         >
           {option}
         </button>

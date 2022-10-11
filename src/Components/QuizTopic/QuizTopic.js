@@ -6,7 +6,7 @@ const QuizTopic = ({ product }) => {
   const { name, logo, total, id } = product;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-fit bg-base-100 shadow-xl">
         <figure>
           <img className="bg-slate-100" src={logo} alt="" />
         </figure>

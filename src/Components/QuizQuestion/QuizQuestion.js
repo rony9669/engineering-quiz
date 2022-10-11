@@ -6,15 +6,15 @@ import QuestionOption from "../QuestionOption/QuestionOption";
 
 const QuizQuestion = ({ ques }) => {
   // console.log(ques);
-  const { question, correctAnswer, id } = ques;
-  //   console.log(question);
+  const { question, correctAnswer } = ques;
+  // console.log(idx);
 
   const newQuestion = question.replace(/(<([^>]+)>)/gi, "");
   //   console.log(newStr);
 
   const handleClick = (event) => {
     const theText = event.currentTarget.textContent;
-    console.log("the text: ", theText);
+    // console.log("the text: ", theText);
     if (theText === correctAnswer) {
       toast.success("Your Answer is Correct", { autoClose: 1000 });
     } else {
@@ -36,9 +36,11 @@ const QuizQuestion = ({ ques }) => {
       </div>
       <div>
         <div>
-          <h1 className="text-center font-semibold">Question:{newQuestion}</h1>
+          <h1 className="text-center font-semibold">
+            <span className="font-bold">Question:</span> {newQuestion}
+          </h1>
         </div>
-        <div className=" grid grid-cols-2  gap-5 mt-5">
+        <div className=" grid grid-cols-2  gap-5 mt-5 ">
           {ques.options.map((option, idx) => (
             <QuestionOption
               key={idx}
