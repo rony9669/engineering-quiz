@@ -20,7 +20,7 @@ const QuizQuestionChart = () => {
   return (
     <div className="grid grid-flow-row justify-center">
       <div>
-        <h1 className="font-bold mb-3 mt-5">
+        <h1 className="font-bold mb-3 mt-5 ml-2">
           The Chart is created based on the topic name and total questions
         </h1>
       </div>
