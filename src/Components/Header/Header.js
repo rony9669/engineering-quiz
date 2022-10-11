@@ -8,7 +8,7 @@ const Header = () => {
       <div className="navbar  bg-sky-900 text-white">
         <div className="flex-1">
           <Link className="btn btn-ghost normal-case text-xl">
-            Engineering Quiz
+            Engineering Quiz Contest
           </Link>
         </div>
         <div className="flex-none">
@@ -16,9 +16,7 @@ const Header = () => {
             <li>
               <Link to="/home">Home</Link>
             </li>
-            <li>
-              <Link>Topics</Link>
-            </li>
+
             <li>
               <Link>Statistics</Link>
             </li>
