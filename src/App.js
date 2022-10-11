@@ -47,6 +47,7 @@ const router = createBrowserRouter([
     loader: async () => {
       return fetch("https://openapi.programming-hero.com/api/quiz");
     },
+
     element: <QuizQuestionChart></QuizQuestionChart>,
   },
   {
