@@ -18,9 +18,9 @@ const QuizQuestionChart = () => {
   console.log(data);
 
   return (
-    <div className="grid grid-flow-row justify-center align-i ">
+    <div className="grid grid-flow-row justify-center">
       <div>
-        <h1>
+        <h1 className="font-bold mb-3 mt-5">
           The Chart is created based on the topic name and total questions
         </h1>
       </div>
