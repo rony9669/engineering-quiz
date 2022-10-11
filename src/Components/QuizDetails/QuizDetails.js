@@ -9,7 +9,7 @@ const QuizDetails = () => {
   return (
     <div>
       <h1>
-        The exam is about: <span>{name}</span>{" "}
+        The exam is about: <span>{name}</span>
       </h1>
     </div>
   );
