@@ -26,6 +26,7 @@ const QuizQuestionChart = () => {
       </div>
       <div>
         <LineChart width={300} height={400} data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
           <Line type="monotone" dataKey="total" stroke="#8884d8" />
           <XAxis dataKey="name" />
           <YAxis />
