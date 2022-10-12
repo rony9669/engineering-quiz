@@ -8,6 +8,9 @@
 
 - This is a Quiz application project.
   \*\*
+
+* Responsive Design
+
 - This project have four particular topic.
 - Anyone can justify herself/himself by answering quiz questions.
 - There is a **start quiz** button for starting the quiz.

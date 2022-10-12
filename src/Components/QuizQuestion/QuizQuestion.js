@@ -5,9 +5,10 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import QuestionOption from "../QuestionOption/QuestionOption";
 
 const QuizQuestion = ({ ques }) => {
-  // console.log(ques);
+  // const { ques, number } = props;
+
+  // console.log(props.number);
   const { question, correctAnswer } = ques;
-  // console.log(idx);
 
   const newQuestion = question.replace(/(<([^>]+)>)/gi, "");
 
@@ -40,9 +41,9 @@ const QuizQuestion = ({ ques }) => {
           </h1>
         </div>
         <div className=" grid grid-cols-2  gap-5 mt-5 ">
-          {ques.options.map((option, idx) => (
+          {ques.options.map((option, index) => (
             <QuestionOption
-              key={idx}
+              key={index}
               option={option}
               handleClick={handleClick}
             ></QuestionOption>
