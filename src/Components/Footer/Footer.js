@@ -118,10 +118,7 @@ const Footer = () => {
         className="text-center text-gray-700 p-4"
         style={{ background: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2021 Copyright:
-        <Link className="text-gray-800" to="/">
-          Tailwind Elements
-        </Link>
+        © 2021 Copyright, All Right Reserved
       </div>
     </footer>
   );
